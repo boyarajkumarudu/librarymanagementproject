@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="logdata" method="post">
+  {% csrf_token %}
+  <h3 style="color:red" align="center">{{data}}</h3>
+  <h2 align="center">LOGIN PAGE</h2>
+  <table align="center" class="input_group">
+    <tr>
+      <td>User Name:</td><td><input type="text" name="txtname"></td>
+    </tr>
+    <tr>
+      <td>Password:</td><td><input type="password" name="txtpass" ></td>
+    </tr>
+    <tr>
+      <td></td><td><input type="submit" value="login" ></td>
+    </tr>
+
+     <tr>
+      <td></td>
+         <td><a href="{% url 'admi' %}">admin signup</a></td>
+
+    </tr>
+    <tr>
+      <td></td>
+         <td><a href="{% url 'stu' %}">student signup</a></td>
+    </tr>
+  </table>
+
+</form>
+
+</body>
+</html>
